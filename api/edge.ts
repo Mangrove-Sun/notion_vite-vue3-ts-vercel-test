@@ -8,7 +8,7 @@ const { APIKEY, USERNAME, MODE } = process.env
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   const userAgent = request.headers['user-agent']
   const id = (request.url as string).split('/').filter(p => p).reverse()[0].split('?')[0]
-  console.log(id)
+  console.log('id:: ',id)
 
   let data = { 
     title: 'Heropy가 운영하는 노션', 
